@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPER CAR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333; /* لون النص الأساسي */
+        }
+
+        {% comment %} header {
+            background: #444; /* لون خلفية أغمق */
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center; /* مركز العنوان */
+        } {% endcomment %}
+        header {
+            background: linear-gradient(135deg, #444, #222); /* تدرج لوني */
+            color: #fff;
+            padding: 10px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3em; /* حجم أكبر للعنوان */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ظل للنص */
+        }
+
+        nav {
+            margin-top: 15px; /* مساحة بين العنوان والقائمة */
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline; /* لجعل العناصر في صف واحد */
+            margin: 0 15px; /* تباعد بين العناصر */
+            padding-bottom: 5px; /* تباعد أسفل النص */
+        }
+        nav ul li a {
+            text-decoration: none; /* إزالة الخط السفلي الافتراضي من الروابط */
+            color: white; /* لون النص */
+            border-bottom: 2px solid transparent; /* خط أسفل العناصر بشكل افتراضي شفاف */
+            transition: border-color 0.3s; /* تأثير الانتقال عند تغيير اللون */
+        }
+        nav ul li a:hover {
+            border-color: white; /* تغيير لون الخط عند التحويم */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .car-item {
+            background: #fff;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px; /* زوايا أكثر انسيابية */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ظل أعمق */
+            transition: transform 0.3s ease; /* تأثير التحويل */
+        }
+
+        .car-item:hover {
+            transform: translateY(-5px); /* رفع العنصر عند التحويم */
+        }
+
+        footer {
+            background: #444; /* لون خلفية متناسق مع الهيدر */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0; /* مساحة أكبر */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em; /* حجم خط أصغر */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #e7e7e7; /* لون خلفية فاتح */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 8px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            flex: 1 1 200px;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* تكبير خفيف */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .spf-text {
+            font-size: 16px;
+            color: #000;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SUPER CAR</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    {% block carp %}
+    <!-- محتوى السيارات هنا -->
+    {% endblock carp %}
+
+    {% block about %}
+<!-- حول صفحة من نحنا -->
+    {% endblock about %}
+
+    {% block contact %}
+    {% endblock contact %}
+
+    <footer>
+        <p>&copy; 2024 Super Car. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
+

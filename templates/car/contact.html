@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block contact %}
+<div class="contact-us">
+      <h2>اتصل بنا</h2>
+      <p>إذا كان لديك أي استفسارات أو تعليقات، فلا تتردد في التواصل معنا عبر وسائل التواصل الاجتماعي أدناه:</p>
+      
+      <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank">
+              <img src="C:\Users\abo khaled\Desktop\z.png" alt="فيسبوك" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+              <img src="path/to/instagram-icon.png" alt="إنستغرام" />
+          </a>
+          <a href="https://wa.me/your-number" target="_blank">
+              <img src="path/to/whatsapp-icon.png" alt="واتساب" />
+          </a>
+          <a href="https://twitter.com" target="_blank">
+              <img src="path/to/twitter-icon.png" alt="تويتر" />
+          </a>
+      </div>
+  </div>
+  
+  <style>
+      .contact-us {
+          text-align: center;
+          margin: 20px;
+      }
+      .social-media {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+      }
+      .social-media img {
+          width: 40px; /* يمكنك تعديل الحجم حسب الحاجة */
+          height: 40px;
+      }
+  </style>
+  
+  {% endblock contact %}

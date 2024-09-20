@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block carp %}
+<div class="container">
+    {% for x in car %}
+    <div class="card">
+        <h2>{{ x.name }}</h2>
+        <img src="{{ x.image.url }}" alt="{{ x.name }}" class="card-image">
+        <pre class="spf-text">{{ x.Brand }}</pre>
+         
+        {{x.price}}<label>$</label>
+        <pre class="spf-text">{{ x.spf }}</pre>
+    </div>
+    {% endfor %}
+</div>
+{% endblock carp %}
